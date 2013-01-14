@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 class UserProfileManager(models.Manager):
 	def create_profile(self,user):
 
+# How do we associate projects with a specific profile?
 class UserProfile(models.Model):
 	user = models.ForeignKey(User)
 	picture = models.ImageField()
