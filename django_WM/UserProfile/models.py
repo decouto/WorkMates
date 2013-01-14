@@ -1,11 +1,11 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-class UserProfileManager:
+class UserProfileManager(models.Manager):
 	def create_profile(self,user):
 
-class UserProfile:
-	name = models.CharField(max_length = 50)
+class UserProfile(models.Model):
+	user = models.ForeignKey(User)
 	picture = models.ImageField()
 	about_me = models.CharField(max_length = 200)
 	interests = models.CharField(max_length = 200)
