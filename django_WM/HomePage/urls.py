@@ -3,6 +3,6 @@ from HomePage import views
 
 urlpatterns = patterns('',
 	url(r'^$',views.index,name='HomePage_index'),
-
-
+	url(r'^$',views.index,name='HomePage_css'),
+	
 )
