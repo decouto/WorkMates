@@ -114,7 +114,9 @@ INSTALLED_APPS = (
 	'UserProfile',
 	'UserProject',
 	'ForumQuestion',
-	'HomePage',	
+	'HomePage',
+	'AtTag',
+	'AndTag',	
 	
 
     # Uncomment the next line to enable admin documentation:
