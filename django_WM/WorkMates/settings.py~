@@ -102,7 +102,7 @@ ROOT_URLCONF = 'WorkMates.urls'
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'WorkMates.wsgi.application'
 
-TEMPLATE_DIRS = ('/Users/DC/Documents/Current_Projects/WorkMates/django_wm/WorkMates/templates_WM')
+TEMPLATE_DIRS = ('/Users/DC/Documents/Current_Projects/WorkMates/django_wm/WorkMates/templates_wm')
 
 INSTALLED_APPS = (
     'django.contrib.auth',

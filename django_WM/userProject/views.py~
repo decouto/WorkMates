@@ -1,4 +1,4 @@
-from django.http import HttpResponse
+from django.http import UserProject
 from django.http import Http404
 from django.shortcuts import render
 from UserProject.models import UserProject
