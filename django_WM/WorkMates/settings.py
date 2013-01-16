@@ -105,15 +105,18 @@ WSGI_APPLICATION = 'WorkMates.wsgi.application'
 TEMPLATE_DIRS = ('/Users/DC/Documents/Current_Projects/WorkMates/django_wm/WorkMates/templates_WM')
 
 INSTALLED_APPS = (
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.sites',
-    'django.contrib.messages',
-    'django.contrib.admin',
-    'UserProfile',
-    'UserProject',
-    'ForumQuestion',	
+	'django.contrib.auth',
+	'django.contrib.contenttypes',
+	'django.contrib.sessions',
+	'django.contrib.sites',
+	'django.contrib.messages',
+	'django.contrib.admin',
+	'UserProfile',
+	'UserProject',
+	'ForumQuestion',
+	'HomePage',	
+	
+
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )

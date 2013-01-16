@@ -1,16 +1,12 @@
 from django.http import HttpResponse
-from django.http import Http404
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from UserProject.models import UserProject
 
 def index(request):
 	return HttpResponse("The project index")
 
 def detail(request,project_id):
-	try:
-		project = UserProject.objects.get(pk=project_id)
-	except UserProject.DoesNotExist:
-		raise Http404
-	return render(request,'UserProject/detail.html',{'poll':poll})
+	project = get_object_or_404(UserProject, pk = project_id)
+	return render(request,'UserProject/detail.html',{'project':poll})
 
 
