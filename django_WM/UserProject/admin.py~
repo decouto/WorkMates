@@ -1,0 +1,4 @@
+from django.contrib import admin
+from UserProject.models import UserProject
+
+admin.site.register(UserProject)
