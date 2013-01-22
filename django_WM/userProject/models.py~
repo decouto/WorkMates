@@ -1,5 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
+from AndTag.models import AndTag
+from AtTag.models import AtTag
 
 class UserProjectManager(models.Manager):
 	def create_project(self,name,date):
@@ -12,6 +14,17 @@ class UserProject(models.Model):
 	project_name = models.CharField(max_length=200)
 #	keyImage = models.ImageField()
 	creator = models.ForeignKey(User)
+	andTags = []
+	atTags = []
+	
+	def addAndTag(self):
+		andTag = models.ManyToManyField(AndTag)
+		self.andTags.add(andTag)
+
+	def addAtTag(self):
+		atTag = models.manyToManyField(AtTag)
+		self.atTags.add(atTag)
+
 	def __unicode__(self):
 		return self.project_name + " by " + self.creator.username
 

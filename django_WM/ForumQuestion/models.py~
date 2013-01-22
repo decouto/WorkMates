@@ -18,4 +18,4 @@ class Answer(models.Model):
 	answer_text = models.TextField('ans_text')
 	answerer = models.ForeignKey(User)
 	def __unicode__(self):
-		return self.answerer.username + ": " + question
+		return self.answerer.username + ": " + self.question.question

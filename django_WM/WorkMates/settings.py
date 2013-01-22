@@ -117,12 +117,18 @@ INSTALLED_APPS = (
 	'HomePage',
 	'AtTag',
 	'AndTag',
-	'haystack',	
+	'haystack',
+	'tagging',	
 	
 
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
+# Tagging Settings
+FORCE_LOWERCASE_TAGS = True
+MAX_TAG_LENGTH = 12
+
+# Haystack Settings
 HAYSTACK_CONNECTIONS = {
 	'default':{
 		'ENGINE': 'haystack.backends.solr_backend.SolrEngine',
