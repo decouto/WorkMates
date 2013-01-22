@@ -7,5 +7,6 @@ urlpatterns = patterns('',
 	url(r'^$',include('HomePage.urls')),
     	url(r'^admin/', include(admin.site.urls)),
 	url(r'^projects/',include('UserProject.urls')),
+	url(r'^search/',include('haystack.urls')),
 	
 )

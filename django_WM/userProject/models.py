@@ -12,6 +12,8 @@ class UserProject(models.Model):
 	project_name = models.CharField(max_length=200)
 #	keyImage = models.ImageField()
 	creator = models.ForeignKey(User)
+	andTag = models.ForeignKey(AndTag)
+	atTag = models.ForeignKey(AtTag)
 	def __unicode__(self):
 		return self.project_name + " by " + self.creator.username
 
@@ -23,5 +25,8 @@ class ProjectPage(models.Model):
 #	page_image = models.ImageField()
 	def __unicode__(self):
 		return self.project.project_name + " page: " + str(self.page_num)
+
+	
+
 
 

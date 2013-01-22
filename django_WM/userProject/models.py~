@@ -22,6 +22,9 @@ class ProjectPage(models.Model):
 	page_text = models.TextField()
 #	page_image = models.ImageField()
 	def __unicode__(self):
-		return self.project.project_name + " page: " + self.page_num
+		return self.project.project_name + " page: " + str(self.page_num)
+
+	
+
 
 
