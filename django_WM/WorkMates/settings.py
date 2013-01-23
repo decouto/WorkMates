@@ -112,7 +112,7 @@ INSTALLED_APPS = (
 	'django.contrib.messages',
 	'django.contrib.admin',
 	'UserProfile',
-	'UserProject',
+	'userProject',
 	'ForumQuestion',
 	'HomePage',
 	'AtTag',

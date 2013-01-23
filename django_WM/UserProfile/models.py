@@ -12,6 +12,6 @@ class UserProfile(models.Model):
 	user = models.OneToOneField(User)
 #	picture = models.ImageField()
 	about_me = models.CharField(max_length = 200)
-	atLocation = models.ManyToManyField(AtTag) # For now projects can only have one location
+	atTag = models.ManyToManyField(AtTag) # For now users can only have one location
 	
 tagging.register(UserProfile, tag_descriptor_attr = 'andTags')

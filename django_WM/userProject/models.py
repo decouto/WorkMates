@@ -1,5 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
+from AtTag.models import AtTag
+import tagging
 
 class UserProjectManager(models.Manager):
 	def create_project(self,name,date):
@@ -12,8 +14,11 @@ class UserProject(models.Model):
 	project_name = models.CharField(max_length=200)
 #	keyImage = models.ImageField()
 	creator = models.ForeignKey(User)
+	atTag = models.ManyToManyField(AtTag) # For now projects can only have one location
 	def __unicode__(self):
 		return self.project_name + " by " + self.creator.username
+
+tagging.register(UserProject, tag_descriptor_attr = 'andTags')
 
 # How do we have more than one image per page?
 class ProjectPage(models.Model):
